@@ -10,7 +10,7 @@ To build this image, just clone this repo and build using docker:
 
     git clone https://github.com/chadxz/asterisk-docker.git
     cd asterisk-docker
-    docker build .
+    docker build -t asterisk .
 
 More often though, you'll want to use the image built by this repo as a base for your 
 own image that needs Asterisk w/ pjsip. This repo is linked to the Docker hub at 
