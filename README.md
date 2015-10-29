@@ -16,9 +16,9 @@ More often though, you'll want to use the image built by this repo as a base for
 own image that needs Asterisk w/ pjsip. This repo is linked to the Docker hub at 
 [chadxz/asterisk][], so you can simply add this to the top of your own Dockerfile:
 
-    FROM chadxz/asterisk:latest
+    FROM chadxz/asterisk:13
 
-Other tags available besides `latest` are `13`, `13.5`, and `13.5.0`.
+Other tags available besides `13` are `latest`, `13.5`, and `13.5.0`.
 
 ## license
 
