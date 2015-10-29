@@ -18,7 +18,7 @@ cd /usr/src/asterisk
 curl -sL http://downloads.asterisk.org/pub/telephony/asterisk/releases/asterisk-${ASTERISK_VERSION}.tar.gz |
     tar --strip-components 1 -xz
 
-./configure --prefix=/usr/local
+./configure 
 make menuselect/menuselect menuselect-tree menuselect.makeopts
 
 # MOAR SOUNDS
@@ -29,12 +29,14 @@ for i in CORE-SOUNDS-EN MOH-OPSOUND EXTRA-SOUNDS-EN; do
 done
 
 make -j ${JOBS} all
-make install samples
-chown -R asterisk:asterisk /usr/local/var/*/asterisk
-chmod -R 750 /usr/local/var/spool/asterisk
+make install
+chown -R asterisk:asterisk /var/*/asterisk
+chmod -R 750 /var/spool/asterisk
+mkdir -p /usr/etc/asterisk
+cp /usr/src/asterisk/configs/basic-pbx/*.conf /usr/etc/asterisk/
 
 # Set runuser and rungroup
-sed -i -E 's/^;(run)(user|group)/\1\2/' /usr/local/etc/asterisk/asterisk.conf
+sed -i -E 's/^;(run)(user|group)/\1\2/' /usr/etc/asterisk/asterisk.conf
 
 cd /
 exec rm -rf /usr/src/asterisk
