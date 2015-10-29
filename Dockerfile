@@ -1,6 +1,6 @@
 # -*- Dockerfile -*-
 
-FROM chadxz/pjsip-docker:latest 
+FROM chadxz/pjsip:latest 
 MAINTAINER David M. Lee, II <dlee@respoke.io>
 
 ENV DEBIAN_FRONTEND=noninteractive
