@@ -14,9 +14,9 @@ To build this image, just clone this repo and build using docker:
 
 More often though, you'll want to use the image built by this repo as a base for your 
 own image that needs Asterisk w/ pjsip. This repo is linked to the Docker hub at 
-[chadxz/asterisk-docker][], so you can simply add this to the top of your own Dockerfile:
+[chadxz/asterisk][], so you can simply add this to the top of your own Dockerfile:
 
-    FROM chadxz/asterisk-docker:latest
+    FROM chadxz/asterisk:latest
 
 Other tags available besides `latest` are `2`, `2.4`, and `2.4.5`.
 
@@ -24,5 +24,5 @@ Other tags available besides `latest` are `2`, `2.4`, and `2.4.5`.
 
 [MIT](https://github.com/chadxz/asterisk-docker/blob/master/README.md)
 
-[chadxz/asterisk-docker]: https://hub.docker.com/r/chadxz/asterisk-docker/
+[chadxz/asterisk]: https://hub.docker.com/r/chadxz/asterisk/
 
