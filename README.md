@@ -24,5 +24,5 @@ Other tags available besides `latest` are `2`, `2.4`, and `2.4.5`.
 
 [MIT](https://github.com/chadxz/asterisk-docker/blob/master/README.md)
 
-[chadxz/pjsip-docker]: https://hub.docker.com/r/chadxz/asterisk-docker/
+[chadxz/asterisk-docker]: https://hub.docker.com/r/chadxz/asterisk-docker/
 
