@@ -1,5 +1,5 @@
 # asterisk-docker
-Dockerfile for building asterisk as a base for chan_respoke
+Dockerfile for building asterisk as a base for chan_respoke.
 
 This Dockerfile currently builds Debian "jessie" release with pjsip 2.4.5 (customized
 for WebRTC/chan_respoke usage) and Asterisk 13.5.0.
