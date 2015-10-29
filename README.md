@@ -22,7 +22,6 @@ Other tags available besides `13` are `latest`, `13.5`, and `13.5.0`.
 
 ## license
 
-[MIT](https://github.com/chadxz/asterisk-docker/blob/master/README.md)
+[MIT](https://github.com/chadxz/asterisk-docker/blob/master/LICENSE)
 
 [chadxz/asterisk]: https://hub.docker.com/r/chadxz/asterisk/
-
