@@ -18,7 +18,7 @@ own image that needs Asterisk w/ pjsip. This repo is linked to the Docker hub at
 
     FROM chadxz/asterisk:latest
 
-Other tags available besides `latest` are `2`, `2.4`, and `2.4.5`.
+Other tags available besides `latest` are `13`, `13.5`, and `13.5.0`.
 
 ## license
 
