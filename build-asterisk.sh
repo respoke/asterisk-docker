@@ -15,7 +15,7 @@ set -ex
 mkdir -p /usr/src/asterisk
 cd /usr/src/asterisk
 
-curl -sL http://downloads.asterisk.org/pub/telephony/asterisk/releases/asterisk-${ASTERISK_VERSION}.tar.gz |
+curl -vsL http://downloads.asterisk.org/pub/telephony/asterisk/releases/asterisk-${ASTERISK_VERSION}.tar.gz |
     tar --strip-components 1 -xz
 
 ./configure 
