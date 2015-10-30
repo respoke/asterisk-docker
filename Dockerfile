@@ -8,7 +8,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 RUN useradd --system asterisk
 
 RUN apt-get update -qq && \
-    apt-get install -y \
+    apt-get install -y --no-install-recommends \
             build-essential \
             curl \
             doxygen \

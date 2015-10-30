@@ -32,6 +32,7 @@ make -j ${JOBS} all
 make install
 chown -R asterisk:asterisk /var/*/asterisk
 chmod -R 750 /var/spool/asterisk
+mkdir -p /etc/asterisk/
 cp /usr/src/asterisk/configs/basic-pbx/*.conf /etc/asterisk/
 
 # Set runuser and rungroup
