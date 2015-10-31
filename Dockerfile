@@ -28,11 +28,15 @@ RUN apt-get update -qq && \
             libspandsp-dev \
             libvorbis-dev \
             portaudio19-dev \
+            python-pip \
             && \
+    pip install j2cli && \
     apt-get purge -y --auto-remove && rm -rf /var/lib/apt/lists/*
 
 ENV ASTERISK_VERSION=13.5.0
 COPY build-asterisk.sh /build-asterisk
 RUN /build-asterisk && rm -f /build-asterisk
-
+COPY conf/ /etc/asterisk/
+COPY asterisk-docker-entrypoint.sh /
 CMD ["/usr/local/sbin/asterisk", "-f"]
+ENTRYPOINT ["/asterisk-docker-entrypoint.sh"]
