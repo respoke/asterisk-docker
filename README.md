@@ -2,7 +2,7 @@
 Dockerfile for building [Asterisk][github/asterisk] as a base for chan_respoke.
 
 This Dockerfile currently builds Debian "jessie" release with pjsip 2.4.5 (customized
-for WebRTC/chan_respoke usage) and Asterisk 13.5.0. It configures Asterisk using the
+for WebRTC/chan_respoke usage) and Asterisk 13.6.0. It configures Asterisk using the
 configs from `asterisk/configs/basic-pbx`, also known as the "Super Awesome Company" 
 configs.
 
@@ -41,14 +41,11 @@ details on the template syntax.
 
 ## repo tags
 
-The following tags are available on Docker Hub: 
+Docker Hub tags are available for versions of Asterisk >= 13.5.0, as well as minor 
+version tags (i.e. `13.5`) that receive all patches to that minor version, and major 
+version tags (i.e. `13`). The `latest` tag points to the latest version of Asterisk.
 
-- `latest` - follows tip of the master tree. The bleeding edge.
-- `13` - receives minor and patch updates to Asterisk 13.
-- `13.5` - receives patch updates to Asterisk 13.5.
-- `13.5.0` - pinned to Asterisk 13.5.0.
-
-## license
+# license
 
 [MIT](https://github.com/respoke/asterisk-docker/blob/master/LICENSE)
 
