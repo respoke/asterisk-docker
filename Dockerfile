@@ -33,7 +33,7 @@ RUN apt-get update -qq && \
     pip install j2cli && \
     apt-get purge -y --auto-remove && rm -rf /var/lib/apt/lists/*
 
-ENV ASTERISK_VERSION=13.5.0
+ENV ASTERISK_VERSION=13.6.0
 COPY build-asterisk.sh /build-asterisk
 RUN /build-asterisk && rm -f /build-asterisk
 COPY conf/ /etc/asterisk/
