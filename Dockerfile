@@ -38,5 +38,5 @@ COPY build-asterisk.sh /build-asterisk
 RUN /build-asterisk && rm -f /build-asterisk
 COPY conf/ /etc/asterisk/
 COPY asterisk-docker-entrypoint.sh /
-CMD ["/usr/local/sbin/asterisk", "-f"]
+CMD ["/usr/sbin/asterisk", "-f"]
 ENTRYPOINT ["/asterisk-docker-entrypoint.sh"]
