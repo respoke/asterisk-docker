@@ -1,5 +1,3 @@
-# -*- Dockerfile -*-
-
 FROM respoke/pjsip:latest 
 MAINTAINER Respoke <info@respoke.io> 
 
@@ -35,7 +33,6 @@ RUN apt-get update -qq && \
 ENV ASTERISK_VERSION=13.10.0
 COPY build-asterisk.sh /build-asterisk
 RUN /build-asterisk && rm -f /build-asterisk
-COPY conf/ /etc/asterisk/
 COPY asterisk-docker-entrypoint.sh /
 CMD ["/usr/sbin/asterisk", "-f"]
 ENTRYPOINT ["/asterisk-docker-entrypoint.sh"]
