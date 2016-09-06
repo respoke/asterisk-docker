@@ -1,5 +1,5 @@
-FROM respoke/pjsip:latest 
-MAINTAINER Respoke <info@respoke.io> 
+FROM respoke/pjsip:latest
+MAINTAINER Respoke <info@respoke.io>
 
 RUN useradd --system asterisk
 
@@ -30,7 +30,7 @@ RUN apt-get update -qq && \
     pip install j2cli && \
     apt-get purge -y --auto-remove && rm -rf /var/lib/apt/lists/*
 
-ENV ASTERISK_VERSION=13.10.0
+ENV ASTERISK_VERSION=13.11.0
 COPY build-asterisk.sh /build-asterisk
 RUN /build-asterisk && rm -f /build-asterisk
 COPY asterisk-docker-entrypoint.sh /
