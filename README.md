@@ -1,10 +1,9 @@
 # asterisk-docker
 Dockerfile for building [Asterisk][github/asterisk] as a base for chan_respoke.
 
-This Dockerfile currently builds Debian "jessie" release with pjsip 2.4.5 (customized
-for WebRTC/chan_respoke usage) and Asterisk. It configures Asterisk using the
-configs from `asterisk/configs/basic-pbx`, also known as the "Super Awesome Company" 
-configs.
+This Dockerfile currently builds Debian "jessie" release.  It configures Asterisk 
+using the configs from `asterisk/configs/basic-pbx`, also known as the "Super 
+Awesome Company" configs.
 
 ## usage
 
@@ -19,7 +18,7 @@ own image that needs Asterisk with pjsip. This repo is linked to the Docker hub 
 [respoke/asterisk][dockerhub/asterisk], so you can simply add this to the top of 
 your own Dockerfile:
 
-    FROM respoke/asterisk:13
+    FROM respoke/asterisk:14
 
 ## using environment variables and templates
 
