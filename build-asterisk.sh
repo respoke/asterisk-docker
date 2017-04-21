@@ -18,7 +18,7 @@ cd /usr/src/asterisk
 curl -vsL http://downloads.asterisk.org/pub/telephony/asterisk/releases/asterisk-${ASTERISK_VERSION}.tar.gz |
     tar --strip-components 1 -xz
 
-./configure 
+./configure --with-pjproject-bundled
 make menuselect/menuselect menuselect-tree menuselect.makeopts
 
 # MOAR SOUNDS
