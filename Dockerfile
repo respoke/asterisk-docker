@@ -33,6 +33,12 @@ RUN apt-get update -qq && \
             uuid \
             uuid-dev \
             xmlstarlet \
+            # needed for some asterisk features
+            sox \
+            # needed for making smtp work from within container with asterisk
+            ssmtp \
+            # needed for pjproject download to work during asterisk build process (otherwise curl is used and may time out)
+            wget \
             && \
     pip install j2cli && \
     apt-get purge -y --auto-remove && rm -rf /var/lib/apt/lists/*
